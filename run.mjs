@@ -55,7 +55,7 @@ async function main() {
   await fs.mkdir(outDir, { recursive: true });
   const mock = flag("--mock");
   const ai = !mock && !flag("--free") && !!process.env.ANTHROPIC_API_KEY;
-  log(mock ? "Mode: mock (test)" : ai ? "Mode: AI" : "Mode: free (no ANTHROPIC_API_KEY): official alerts only");
+  log(mock ? "Mode: mock (test)" : ai ? "Mode: AI" : "Mode: free (no ANTHROPIC_API_KEY): official alerts + press by keywords");
 
   let candidates;
   const file = value("--candidates");

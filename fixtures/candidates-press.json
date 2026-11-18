@@ -1,14 +1,13 @@
 [
- { "market": "PL", "source": "tvn24.pl", "title": "Strajk nauczycieli w całej Polsce od poniedziałku", "url": "https://example.org/pl/1", "publishedAt": "2026-11-18T06:00:00Z", "origin": "gdelt" },
- { "market": "PL", "source": "rp.pl", "title": "Nauczyciele zapowiadają strajk. Szkoły zamknięte?", "url": "https://example.org/pl/2", "publishedAt": "2026-11-18T05:00:00Z", "origin": "gdelt" },
- { "market": "PL", "source": "onet.pl", "title": "Strajk w oświacie: co muszą wiedzieć rodzice", "url": "https://example.org/pl/3", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
- { "market": "PL", "source": "sport.pl", "title": "Wybory prezesa klubu piłkarskiego", "url": "https://example.org/pl/4", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
- { "market": "ES", "source": "elpais.com", "title": "Huelga de hambre de un activista en Madrid", "url": "https://example.org/es/1", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
- { "market": "ES", "source": "elmundo.es", "title": "Huelga de hambre: el activista cumple diez días", "url": "https://example.org/es/2", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
- { "market": "ES", "source": "abc.es", "title": "Huelga de hambre en Madrid", "url": "https://example.org/es/3", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
- { "market": "DE", "source": "tagesschau.de", "title": "Bundestagswahl: Parteien starten in den Wahlkampf", "url": "https://example.org/de/1", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
- { "market": "DE", "source": "spiegel.de", "title": "Wahlkampf beginnt: Umfragen sehen enges Rennen", "url": "https://example.org/de/2", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
- { "market": "DE", "source": "zeit.de", "title": "Neuwahl im Februar: Was jetzt passiert", "url": "https://example.org/de/3", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
- { "market": "DE", "source": "faz.net", "title": "Wahl 2027: Termine und Fristen", "url": "https://example.org/de/4", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
- { "market": "ES", "source": "MeteoAlarm", "origin": "meteoalarm", "hazard": "rain", "level": "red", "areas": ["Litoral sur de Valencia", "Ribera del Júcar"], "onset": "2026-11-18T06:00:00Z", "expires": "2026-11-19T00:00:00Z", "title": "red rain warning in Spain: 2 areas", "url": "https://meteoalarm.org", "publishedAt": "2026-11-18T06:00:00Z" }
+ { "market": "ES", "source": "EL PAÍS", "title": "Los médicos madrileños retoman la huelga con una protesta ante el Hospital de Móstoles", "url": "https://example.org/es/1", "publishedAt": "2026-11-18T06:00:00Z", "origin": "gdelt" },
+ { "market": "ES", "source": "El Mundo", "title": "Huelga de médicos en Madrid: los servicios mínimos en los hospitales madrileños", "url": "https://example.org/es/2", "publishedAt": "2026-11-18T05:00:00Z", "origin": "gdelt" },
+ { "market": "ES", "source": "Telemadrid", "title": "Segunda jornada de huelga de médicos madrileños en los hospitales", "url": "https://example.org/es/3", "publishedAt": "2026-11-18T05:00:00Z", "origin": "gdelt" },
+ { "market": "ES", "source": "ABC", "title": "Huelga de hambre de un activista en Madrid", "url": "https://example.org/es/4", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
+ { "market": "DE", "source": "tagesschau.de", "title": "Pia Steckelbach zur Knesset-Wahl in Israel", "url": "https://example.org/de/1", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
+ { "market": "DE", "source": "e-fundresearch.com", "title": "Brasilien nach der Wahl: ein Blick über die Marktreaktion hinaus", "url": "https://example.org/de/2", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
+ { "market": "DE", "source": "St. Galler Tagblatt", "title": "Aldreys Wahl zum neuen Polizeikommandanten", "url": "https://example.org/de/3", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
+ { "market": "PL", "source": "spam.example", "title": "Darmowe gry NSFW recenzowane 2026 najlepsze wybory", "url": "https://example.org/pl/1", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" },
+ { "market": "PL", "source": "tvn24.pl", "title": "Strajk nauczycieli w całej Polsce od poniedziałku", "url": "https://example.org/pl/2", "publishedAt": "2026-11-18T06:00:00Z", "origin": "gdelt" },
+ { "market": "PL", "source": "rp.pl", "title": "Nauczyciele zapowiadają strajk w całej Polsce", "url": "https://example.org/pl/3", "publishedAt": "2026-11-18T05:00:00Z", "origin": "gdelt" },
+ { "market": "PL", "source": "onet.pl", "title": "Strajk nauczycieli: co muszą wiedzieć rodzice w całej Polsce", "url": "https://example.org/pl/4", "publishedAt": "2026-11-18T04:00:00Z", "origin": "gdelt" }
 ]
