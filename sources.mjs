@@ -3,6 +3,8 @@
 import { MARKETS } from "./markets.mjs";
 
 const UA = "CheilCoEHub-NewsJob/1.0";
+/* How many source requests answered and failed in this run, so the job can tell "all quiet" from "nothing reachable". */
+export const stats = { ok: 0, failed: 0 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function get(url, { timeout = 30000 } = {}) {
@@ -11,7 +13,12 @@ async function get(url, { timeout = 30000 } = {}) {
   try {
     const res = await fetch(url, { headers: { "User-Agent": UA }, signal: ctrl.signal });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return await res.text();
+    const text = await res.text();
+    stats.ok++;
+    return text;
+  } catch (e) {
+    stats.failed++;
+    throw e;
   } finally {
     clearTimeout(timer);
   }
@@ -50,7 +57,8 @@ export async function gdacs(log) {
       const iso3s = tag(it, "gdacs:iso3").split(/[,;\s]+/).filter(Boolean);
       for (const code of iso3s.map((c) => byIso3[c]).filter(Boolean)) {
         out.push({ market: code, source: "GDACS", title: `${level} alert: ${tag(it, "title")}`, url: tag(it, "link"),
-          publishedAt: iso(tag(it, "pubDate")), origin: "gdacs", extra: tag(it, "description").slice(0, 300) });
+          publishedAt: iso(tag(it, "pubDate")), origin: "gdacs", extra: tag(it, "description").slice(0, 300),
+          level: /red/i.test(level) ? "red" : "orange", hazard: tag(it, "gdacs:eventtype") });
       }
     }
     log(`GDACS: ${out.length} alerts`);
@@ -112,10 +120,66 @@ export function tidy(list, { maxAgeHours = 48 } = {}) {
   return list
     .filter((c) => c.title && c.url && (c.origin === "previous" || new Date(c.publishedAt).getTime() >= cutoff))
     .filter((c) => {
-      const k1 = c.url, k2 = `${c.market}|${c.title.toLowerCase()}`;
+      const k1 = c.origin === "meteoalarm" ? c.title : c.url, k2 = `${c.market}|${c.title.toLowerCase()}`;
       if (seen.has(k1) || seen.has(k2)) return false;
       seen.add(k1); seen.add(k2);
       return true;
     })
     .map((c, i) => ({ ...c, id: `c${i + 1}` }));
+}
+
+/* MeteoAlarm (European weather services, CC BY 4.0): orange and red warnings in force or starting in the next 36 h.
+   One entry per area and warning, so they are grouped into one candidate per country, hazard and level. */
+const HAZARDS = [
+  ["thunderstorm", /thunder/i], ["wind", /wind|gale|storm|gust/i], ["rain", /rain|precipitation/i], ["flood", /flood/i],
+  ["snow", /snow|ice|icing|freez/i], ["heat", /heat|high.temp/i], ["cold", /cold|low.temp/i], ["fire", /fire/i],
+  ["coastal", /coast|wave|sea/i], ["avalanche", /avalanche/i], ["fog", /fog/i]
+];
+function hazardOf(text) {
+  for (const [k, re] of HAZARDS) if (re.test(text)) return k;
+  return "other";
+}
+
+export async function meteoalarm(log, { pauseMs = 300, horizonHours = 36 } = {}) {
+  const out = [];
+  const now = Date.now(), horizon = now + horizonHours * 36e5;
+  for (const m of MARKETS.filter((x) => x.meteo)) {
+    try {
+      const xml = await get(`https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-${m.meteo}`);
+      const entries = xml.match(/<entry[\s>][\s\S]*?<\/entry>/gi) || [];
+      const groups = new Map();
+      for (const e of entries) {
+        const sev = tag(e, "cap:severity");
+        if (!/severe|extreme/i.test(sev)) continue;
+        if (/cancel/i.test(tag(e, "cap:message_type"))) continue;
+        const onset = new Date(tag(e, "cap:onset") || tag(e, "cap:effective")).getTime();
+        const expires = new Date(tag(e, "cap:expires")).getTime();
+        if (expires && expires < now) continue;
+        if (onset && onset > horizon) continue;
+        const level = /extreme/i.test(sev) ? "red" : "orange";
+        const title = tag(e, "title"), event = tag(e, "cap:event");
+        const hazard = hazardOf(`${(title.match(/(?:yellow|orange|red)\s+(.+?)\s+warning/i) || [])[1] || ""} ${event}`);
+        const key = `${hazard}|${level}`;
+        const g = groups.get(key) || { areas: new Set(), onset: Infinity, expires: 0, event };
+        g.areas.add(tag(e, "cap:areaDesc"));
+        g.onset = Math.min(g.onset, onset || now);
+        g.expires = Math.max(g.expires, expires || 0);
+        groups.set(key, g);
+      }
+      for (const [key, g] of groups) {
+        const [hazard, level] = key.split("|");
+        const areas = [...g.areas].filter(Boolean);
+        out.push({ market: m.code, source: "MeteoAlarm", origin: "meteoalarm", hazard, level, areas,
+          onset: new Date(g.onset).toISOString(), expires: g.expires ? new Date(g.expires).toISOString() : null,
+          title: `${level} ${hazard} warning in ${m.en}: ${areas.length} areas (${areas.slice(0, 4).join(", ")})`,
+          url: "https://meteoalarm.org", publishedAt: new Date(Math.min(g.onset, now)).toISOString(),
+          extra: g.event });
+      }
+      log(`MeteoAlarm ${m.code}: ${groups.size} orange/red warnings`);
+    } catch (e) {
+      log(`MeteoAlarm ${m.code} skipped: ${e.message}`);
+    }
+    await sleep(pauseMs);
+  }
+  return out;
 }
