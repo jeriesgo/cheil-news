@@ -6,7 +6,7 @@ Las claves nunca viajan dentro de la app: el proceso corre fuera, una vez al dí
 
 ## Dos modos
 
-- **Gratuito (sin clave).** Es el modo actual. Usa solo avisos oficiales: catástrofes de GDACS en alerta naranja o roja y avisos meteorológicos naranja y rojo de MeteoAlarm (la red de los servicios meteorológicos europeos; Albania no está en ella). Los textos salen de plantillas en español e inglés. No recoge elecciones, huelgas ni luto oficial.
+- **Gratuito (sin clave).** Es el modo actual. Usa solo avisos oficiales: catástrofes de GDACS en alerta naranja o roja y avisos meteorológicos naranja y rojo de MeteoAlarm (la red de los servicios meteorológicos europeos; Albania no está en ella). Los textos salen de plantillas en español e inglés. Además añade, como mucho, un titular de prensa por país (GDELT) cuando al menos 3 medios distintos hablan de elecciones, huelgas o luto oficial. Ese titular sale en su idioma original y se elige por palabras clave, así que puede colarse algo de ruido. Para quitarlo, añade `--no-press` en la tarea diaria.
 - **Con IA (con clave).** En cuanto exista el secreto `ANTHROPIC_API_KEY`, el proceso pasa solo a este modo: añade la prensa local y Claude elige y redacta. Si un día falla la IA, ese día se usa el modo gratuito.
 
 Para el modo con IA, saca la clave en https://console.anthropic.com: crea la cuenta, añade crédito en **Billing** y genera la clave en **API Keys**. Después guárdala como secreto del repositorio (paso 3 de abajo).
@@ -50,6 +50,7 @@ Sin esa línea la Home sigue mostrando las noticias de ejemplo, marcadas como ta
 npm install
 node run.mjs --dry-run                                         # recoge titulares y los guarda en out/candidates.json
 node run.mjs --candidates fixtures/candidates-alerts.json        # modo gratuito con avisos de prueba
+node run.mjs --candidates fixtures/candidates-press.json         # modo gratuito con titulares de prueba
 node run.mjs --candidates fixtures/candidates-sample.json --mock  # recorre todo el proceso sin IA ni coste
 ```
 
@@ -69,6 +70,7 @@ Si el modelo rechaza la petición por sus filtros de seguridad (poco probable co
 | `sources.mjs` | Lectura de GDACS, MeteoAlarm, GDELT y RSS, y limpieza de duplicados. |
 | `select.mjs` | Modo con IA: instrucciones para Claude, esquema de respuesta y validación. |
 | `free.mjs` | Modo gratuito: textos fijos a partir de los avisos oficiales. |
+| `press.mjs` | Modo gratuito: un titular de prensa por país, elegido por palabras clave en los 25 idiomas. |
 | `markets.mjs` | Los 32 países con sus códigos para GDELT y GDACS, y los RSS opcionales. |
 | `.github/workflows/news.yml` | Ejecución diaria y publicación en GitHub Pages. |
 | `fixtures/` | Titulares de prueba y un ejemplo del archivo final. |

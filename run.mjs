@@ -2,7 +2,9 @@
 /* Cheil CoE Hub daily news job.
    node run.mjs                     with ANTHROPIC_API_KEY: AI mode (alerts + press, chosen by Claude).
                                     without it: free mode (official GDACS and MeteoAlarm alerts only, fixed wording).
+                                    plus, in free mode, up to one press headline per country picked by keywords (GDELT).
    node run.mjs --free              force the free mode even with a key
+   node run.mjs --no-press          free mode without press headlines (official alerts only)
    node run.mjs --dry-run           fetch sources and write out/candidates.json only (no key, no cost)
    node run.mjs --candidates F      use saved candidates instead of fetching
    node run.mjs --mock              skip Claude: one headline per market, for testing the app
@@ -13,6 +15,7 @@ import path from "node:path";
 import { CODES, MARKETS, EXTRA_FEEDS } from "./markets.mjs";
 import { gdacs, gdelt, rss, meteoalarm, tidy, stats } from "./sources.mjs";
 import { selectFree } from "./free.mjs";
+import { selectPress } from "./press.mjs";
 import { MODEL, selectWithClaude, selectMock, toFeedItems } from "./select.mjs";
 
 const args = process.argv.slice(2);
@@ -35,6 +38,18 @@ async function previousItems() {
   }
 }
 
+/* Free mode: official alerts, plus one press headline per country when there is one; at most 2 per country, the top alert first. */
+function freeItems(candidates) {
+  const alerts = selectFree(candidates, MARKETS);
+  const press = flag("--no-press") ? [] : selectPress(candidates);
+  const out = [];
+  for (const code of CODES) {
+    const a = alerts.filter((i) => i.market === code), p = press.filter((i) => i.market === code);
+    out.push(...(p.length ? [...a.slice(0, 1), ...p] : a.slice(0, 2)));
+  }
+  return out;
+}
+
 async function main() {
   await fs.mkdir(outDir, { recursive: true });
   const mock = flag("--mock");
@@ -48,7 +63,7 @@ async function main() {
     log(`Loaded ${candidates.length} candidates from ${file}`);
   } else {
     const alerts = [...(await gdacs(log)), ...(await meteoalarm(log))];
-    const press = ai || flag("--dry-run") ? [...(await rss(log, EXTRA_FEEDS)), ...(await previousItems()), ...(await gdelt(log))] : [];
+    const press = ai || flag("--dry-run") || !flag("--no-press") ? [...(await rss(log, EXTRA_FEEDS)), ...(await previousItems()), ...(await gdelt(log))] : [];
     candidates = tidy([...alerts, ...press]);
     log(`${candidates.length} candidates after removing duplicates (${stats.ok} sources answered, ${stats.failed} failed)`);
     if (!stats.ok) throw new Error("No source could be reached. Keeping the previous feed.");
@@ -65,10 +80,10 @@ async function main() {
       items = toFeedItems(await selectWithClaude(candidates, { log }), candidates); model = MODEL;
     } catch (e) {
       log(`AI step failed (${e.message}). Falling back to the free mode for today.`);
-      items = selectFree(candidates, MARKETS); model = "free";
+      items = freeItems(candidates); model = "free";
     }
   } else {
-    items = selectFree(candidates, MARKETS); model = "free";
+    items = freeItems(candidates); model = "free";
   }
 
   const feed = { version: 1, generatedAt: new Date().toISOString(), mode: model === "free" ? "free" : model === "mock" ? "mock" : "ai", model, markets: CODES, items };

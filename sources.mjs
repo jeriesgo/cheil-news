@@ -72,9 +72,9 @@ export async function gdacs(log) {
 /* GDELT DOC 2.0: local press of each country, last 36 h, only the themes that matter.
    GDELT translates 65 languages, so English keywords also match local-language articles.
    GDELT asks for one request every 5 seconds. */
-const THEMES = '(election OR referendum OR "general strike" OR "national strike" OR strike OR wildfire OR flood OR earthquake OR storm OR "red alert" OR "state of emergency" OR "national mourning" OR blackout OR outbreak OR "government collapse")';
+const THEMES = '(election OR elections OR referendum OR strike OR strikes OR walkout OR wildfire OR flood OR earthquake OR storm OR "red alert" OR "state of emergency" OR mourning OR blackout OR outbreak OR "government collapse")';
 
-export async function gdelt(log, { perMarket = 20, pauseMs = 5500 } = {}) {
+export async function gdelt(log, { perMarket = 75, pauseMs = 5500 } = {}) {
   const out = [];
   for (const m of MARKETS) {
     const q = encodeURIComponent(`sourcecountry:${m.fips} ${THEMES}`);
