@@ -1,4 +1,4 @@
-/* Free press mode, no AI: from GDELT's local-press headlines (original language), keeps at most one per country
+/* Free press mode, no AI: from local-press headlines (Google News per country) (original language), keeps at most one per country
    when a topic that matters (elections, strikes, official mourning) is covered by several different outlets.
    Headlines are not translated: the app shows them as published, with the category in Spanish or English.
    It is a keyword filter, so some noise can get through; the AI mode is the one that really judges. */
@@ -8,13 +8,13 @@ import { createHash } from "node:crypto";
 const TOPICS = {
   election: ["elecci", "electoral", "eleiç", "eleitor", "elezion", "élection", "électoral", "wahl", "neuwahl", "bundestagswahl", "landtagswahl", "kommunalwahl",
     "verkiezing", "election", "referend", "wybor", "volby", "voleb", "választás", "alegeri", "избори", "izbori", "volitv", "εκλογ",
-    "δημοψήφισμ", "zgjedhj", "valimis", "vēlēšan", "rinkim", "folketingsvalg", "stortingsvalg", "riksdagsval", "kommunalval", "vaali",
+    "δημοψήφισμ", "zgjedhj", "valimis", "vēlēšan", "rinkim", "folketingsvalg", "stortingsvalg", "riksdagsval", "kommunalval", "valet", "valrörelse", "valget", "valg", "voľb", "valimised", "vaali",
     "вибор", "референдум", "snap poll", "parlamentsvalg", "kommunevalg"],
   strike: ["huelga", "greve", "sciopero", "grève", "streik", "warnstreik", "staking", "strike", "strajk", "stávk", "sztrájk", "grevă",
     "стачк", "štrajk", "stavk", "штрајк", "strejk", "streiks", "streik", "lakko", "страйк", "страйк"],
   mourning: ["luto", "lutto", "deuil", "staatstrauer", "landestrauer", "nationale rouw", "national mourning", "żałob", "státní smutek",
     "štátny smútok", "gyász", "doliu", "траур", "dan žalosti", "dan žalovanja", "πένθος", "zi kombëtare", "leinapäev", "sēru", "gedulo",
-    "landesorg", "landssorg", "suruliput", "жалоба"]
+    "landesorg", "landssorg", "suruliput", "жалоба", "жалост", "žalost", "žalovan", "smútok"]
 };
 /* Headlines that share those words but are not what we want. */
 const NOISE = ["hambre", "fome", "fame", "faim", "hunger", "głodow", "hlad", "éhség", "foame", "глад", "πείνα", "nälkä", "голод",

@@ -2,7 +2,7 @@
 /* Cheil CoE Hub daily news job.
    node run.mjs                     with ANTHROPIC_API_KEY: AI mode (alerts + press, chosen by Claude).
                                     without it: free mode (official GDACS and MeteoAlarm alerts only, fixed wording).
-                                    plus, in free mode, up to one press headline per country picked by keywords (GDELT).
+                                    plus, in free mode, up to one press headline per country picked by keywords (Google News).
    node run.mjs --free              force the free mode even with a key
    node run.mjs --no-press          free mode without press headlines (official alerts only)
    node run.mjs --dry-run           fetch sources and write out/candidates.json only (no key, no cost)
@@ -13,7 +13,8 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { CODES, MARKETS, EXTRA_FEEDS } from "./markets.mjs";
-import { gdacs, gdelt, rss, meteoalarm, tidy, stats } from "./sources.mjs";
+import { gdacs, rss, meteoalarm, tidy, stats, get, items, tag, iso, sleep } from "./sources.mjs";
+import { gnews } from "./gnews.mjs";
 import { selectFree } from "./free.mjs";
 import { selectPress } from "./press.mjs";
 import { MODEL, selectWithClaude, selectMock, toFeedItems } from "./select.mjs";
@@ -63,7 +64,7 @@ async function main() {
     log(`Loaded ${candidates.length} candidates from ${file}`);
   } else {
     const alerts = [...(await gdacs(log)), ...(await meteoalarm(log))];
-    const press = ai || flag("--dry-run") || !flag("--no-press") ? [...(await rss(log, EXTRA_FEEDS)), ...(await previousItems()), ...(await gdelt(log))] : [];
+    const press = ai || flag("--dry-run") || !flag("--no-press") ? [...(await rss(log, EXTRA_FEEDS)), ...(await previousItems()), ...(await gnews(log, { get, items, tag, iso, sleep }))] : [];
     candidates = tidy([...alerts, ...press]);
     log(`${candidates.length} candidates after removing duplicates (${stats.ok} sources answered, ${stats.failed} failed)`);
     if (!stats.ok) throw new Error("No source could be reached. Keeping the previous feed.");

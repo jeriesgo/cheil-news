@@ -5,9 +5,9 @@ import { MARKETS } from "./markets.mjs";
 const UA = "CheilCoEHub-NewsJob/1.0";
 /* How many source requests answered and failed in this run, so the job can tell "all quiet" from "nothing reachable". */
 export const stats = { ok: 0, failed: 0 };
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function get(url, { timeout = 30000 } = {}) {
+export async function get(url, { timeout = 30000 } = {}) {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeout);
   try {
@@ -33,14 +33,14 @@ function decode(s) {
     .replace(/&#(\d+);/g, (m, n) => String.fromCharCode(+n)).replace(/&amp;/g, "&")
     .replace(/\s+/g, " ").trim();
 }
-function tag(xml, name) {
+export function tag(xml, name) {
   const m = xml.match(new RegExp(`<${name}(?:\\s[^>]*)?>([\\s\\S]*?)</${name}>`, "i"));
   return m ? decode(m[1]) : "";
 }
-function items(xml) {
+export function items(xml) {
   return xml.match(/<item[\s>][\s\S]*?<\/item>/gi) || [];
 }
-function iso(date) {
+export function iso(date) {
   const d = new Date(date);
   return isNaN(d) ? new Date().toISOString() : d.toISOString();
 }
