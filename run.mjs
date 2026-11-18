@@ -91,6 +91,7 @@ async function main() {
   const tmp = feedPath + ".tmp";
   await fs.writeFile(tmp, JSON.stringify(feed, null, 1));
   await fs.rename(tmp, feedPath); // never leave a half-written feed
+  for (const i of items) log(`  ${i.market} ${i.category} | ${i.title.es} | ${i.source}`);
   log(`Wrote ${items.length} items for ${new Set(items.map((i) => i.market)).size} markets to ${feedPath}`);
 }
 
