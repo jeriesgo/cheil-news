@@ -74,22 +74,46 @@ export async function gdacs(log) {
    GDELT asks for one request every 5 seconds. */
 const THEMES = '(election OR elections OR referendum OR strike OR strikes OR walkout OR wildfire OR flood OR earthquake OR storm OR "red alert" OR "state of emergency" OR mourning OR blackout OR outbreak OR "government collapse")';
 
-export async function gdelt(log, { perMarket = 75, pauseMs = 5500 } = {}) {
+/* GDELT asks for at most one request every 5 seconds per address, and GitHub runners share addresses, so one request
+   per country gets throttled. Countries go in small groups (one request each), with a retry after a pause when throttled.
+   Each article says its source country by name, which maps it back to our code. */
+const GDELT_NAMES = { "czech republic": "CZ", czechia: "CZ", macedonia: "MK", "north macedonia": "MK", "bosnia and herzegovina": "BA",
+  "bosnia-herzegovina": "BA", bosnia: "BA", "united kingdom": "UK", uk: "UK", "great britain": "UK", netherlands: "NL", "the netherlands": "NL" };
+function gdeltCode(name) {
+  const n = String(name || "").toLowerCase().trim();
+  if (GDELT_NAMES[n]) return GDELT_NAMES[n];
+  const m = MARKETS.find((x) => x.en.toLowerCase() === n);
+  return m ? m.code : null;
+}
+
+export async function gdelt(log, { groupSize = 4, perGroup = 250, pauseMs = 8000, retries = 3 } = {}) {
   const out = [];
-  for (const m of MARKETS) {
-    const q = encodeURIComponent(`sourcecountry:${m.fips} ${THEMES}`);
-    const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${q}&mode=artlist&format=json&sort=hybridrel&timespan=36h&maxrecords=${perMarket}`;
-    try {
-      const text = await get(url);
-      const data = JSON.parse(text);
-      const arts = data.articles || [];
-      for (const a of arts) {
-        out.push({ market: m.code, source: a.domain, title: decode(a.title), url: a.url,
-          publishedAt: iso(String(a.seendate || "").replace(/^(\d{4})(\d\d)(\d\d)T(\d\d)(\d\d)(\d\d)Z$/, "$1-$2-$3T$4:$5:$6Z")), origin: "gdelt" });
+  const groups = [];
+  for (let i = 0; i < MARKETS.length; i += groupSize) groups.push(MARKETS.slice(i, i + groupSize));
+  for (const g of groups) {
+    const countries = g.map((m) => `sourcecountry:${m.fips}`).join(" OR ");
+    const q = encodeURIComponent(`(${countries}) ${THEMES}`);
+    const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${q}&mode=artlist&format=json&sort=hybridrel&timespan=36h&maxrecords=${perGroup}`;
+    const label = g.map((m) => m.code).join(",");
+    for (let attempt = 1; attempt <= retries; attempt++) {
+      try {
+        const text = await get(url, { timeout: 45000 });
+        const arts = JSON.parse(text).articles || [];
+        const counts = {}, unknown = new Set();
+        for (const a of arts) {
+          const code = gdeltCode(a.sourcecountry);
+          if (!code) unknown.add(a.sourcecountry);
+          if (!code || !g.some((m) => m.code === code)) continue;
+          counts[code] = (counts[code] || 0) + 1;
+          out.push({ market: code, source: a.domain, title: decode(a.title), url: a.url,
+            publishedAt: iso(String(a.seendate || "").replace(/^(\d{4})(\d\d)(\d\d)T(\d\d)(\d\d)(\d\d)Z$/, "$1-$2-$3T$4:$5:$6Z")), origin: "gdelt" });
+        }
+        log(`GDELT ${label}: ${arts.length} articles (${Object.entries(counts).map(([k, v]) => k + " " + v).join(", ") || "none mapped"})${unknown.size ? "; unknown countries: " + [...unknown].join(", ") : ""}`);
+        break;
+      } catch (e) {
+        log(`GDELT ${label} attempt ${attempt} failed: ${e.message}`);
+        if (attempt < retries) await sleep(pauseMs * attempt * 2);
       }
-      log(`GDELT ${m.code}: ${arts.length}`);
-    } catch (e) {
-      log(`GDELT ${m.code} skipped: ${e.message}`);
     }
     await sleep(pauseMs);
   }
