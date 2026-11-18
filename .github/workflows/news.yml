@@ -7,7 +7,7 @@ on:
     - cron: "30 4 * * *"   # every day 04:30 UTC (05:30 Madrid in winter, 06:30 in summer)
   workflow_dispatch: {}    # "Run workflow" button for a manual run
 permissions:
-  contents: read
+  contents: write   # pushes a copy of the feed to the "feed" branch (mirror for networks that block github.io)
   pages: write
   id-token: write
 concurrency:
@@ -27,6 +27,12 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           NEWS_PREVIOUS_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/news-feed.json
+      - name: Mirror the feed to the feed branch
+        run: |
+          mkdir -p mirror && cp out/news-feed.json mirror/
+          cd mirror && git init -q -b feed && git add news-feed.json
+          git -c user.name="cheil-news-bot" -c user.email="cheil-news-bot@users.noreply.github.com" commit -qm "Feed $(date -u +%FT%TZ)"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" feed
       - run: rm out/candidates.json
       - uses: actions/upload-pages-artifact@v3
         with:
