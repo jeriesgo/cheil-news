@@ -1,0 +1,93 @@
+{
+ "version": 1,
+ "generatedAt": "2026-11-18T06:29:58.562Z",
+ "model": "example",
+ "markets": [],
+ "items": [
+  {
+   "id": "ES-b34786093f86",
+   "market": "ES",
+   "category": "weather",
+   "title": {
+    "es": "Aviso rojo por lluvias torrenciales en Valencia",
+    "en": "Red warning for torrential rain in Valencia"
+   },
+   "note": {
+    "es": "Evita piezas de exterior o de playa en la zona estos días.",
+    "en": "Avoid outdoor or beach content in the area for a few days."
+   },
+   "source": "example.org",
+   "url": "https://example.org/es/1",
+   "publishedAt": "2026-11-17T08:10:00Z",
+   "sample": false
+  },
+  {
+   "id": "PT-5b8dcc9d80bb",
+   "market": "PT",
+   "category": "election",
+   "title": {
+    "es": "El presidente disuelve el Parlamento y convoca elecciones en enero",
+    "en": "President dissolves parliament and calls January elections"
+   },
+   "note": {
+    "es": "Periodo electoral: evita tonos políticos o institucionales.",
+    "en": "Election period: avoid political or institutional tones."
+   },
+   "source": "example.org",
+   "url": "https://example.org/pt/1",
+   "publishedAt": "2026-11-16T19:30:00Z",
+   "sample": false
+  },
+  {
+   "id": "BE-85bc94dd637d",
+   "market": "BE",
+   "category": "strike",
+   "title": {
+    "es": "Huelga nacional de transporte público el jueves",
+    "en": "National public transport strike on Thursday"
+   },
+   "note": {
+    "es": "Prevé retrasos en entregas y reuniones presenciales.",
+    "en": "Expect delays to deliveries and in-person meetings."
+   },
+   "source": "example.org",
+   "url": "https://example.org/be/1",
+   "publishedAt": "2026-11-17T06:00:00Z",
+   "sample": false
+  },
+  {
+   "id": "IT-325531735d14",
+   "market": "IT",
+   "category": "disaster",
+   "title": {
+    "es": "Inundaciones en Emilia-Romaña obligan a evacuar varias localidades",
+    "en": "Floods force evacuations in Emilia-Romagna"
+   },
+   "note": {
+    "es": "Revisa contenidos festivos programados para la región.",
+    "en": "Review upbeat content scheduled for the region."
+   },
+   "source": "GDACS",
+   "url": "https://example.org/it/1",
+   "publishedAt": "2026-11-17T04:00:00Z",
+   "sample": false
+  },
+  {
+   "id": "GR-331e81427e99",
+   "market": "GR",
+   "category": "disaster",
+   "title": {
+    "es": "Estado de emergencia por incendios cerca de Atenas",
+    "en": "State of emergency as wildfires spread near Athens"
+   },
+   "note": {
+    "es": "Pausa campañas con mensajes de verano o exterior en Grecia.",
+    "en": "Pause summer or outdoor messaging in Greece."
+   },
+   "source": "BBC News Europe",
+   "url": "https://example.org/gr/1",
+   "publishedAt": "2026-11-17T10:00:00Z",
+   "sample": false
+  }
+ ]
+}

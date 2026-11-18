@@ -1,0 +1,10 @@
+[
+ { "market": "ES", "source": "example.org", "title": "AEMET activa el aviso rojo por lluvias torrenciales en Valencia", "url": "https://example.org/es/1", "publishedAt": "2026-11-17T08:10:00Z", "origin": "gdelt" },
+ { "market": "ES", "source": "example.org", "title": "El Real Madrid gana el derbi en el último minuto", "url": "https://example.org/es/2", "publishedAt": "2026-11-17T21:00:00Z", "origin": "gdelt" },
+ { "market": "PT", "source": "example.org", "title": "Presidente dissolve o parlamento e marca eleições para janeiro", "url": "https://example.org/pt/1", "publishedAt": "2026-11-16T19:30:00Z", "origin": "gdelt" },
+ { "market": "BE", "source": "example.org", "title": "Grève nationale des transports publics ce jeudi", "url": "https://example.org/be/1", "publishedAt": "2026-11-17T06:00:00Z", "origin": "gdelt" },
+ { "market": "IT", "source": "GDACS", "title": "Orange alert: Flood in Emilia-Romagna", "url": "https://example.org/it/1", "publishedAt": "2026-11-17T04:00:00Z", "origin": "gdacs", "extra": "Several towns evacuated" },
+ { "market": "DE", "source": "example.org", "title": "Bundestag beschließt Haushalt 2027", "url": "https://example.org/de/1", "publishedAt": "2026-11-17T15:00:00Z", "origin": "gdelt" },
+ { "market": "DE", "source": "example.org", "title": "Promi-Hochzeit in München sorgt für Aufsehen", "url": "https://example.org/de/2", "publishedAt": "2026-11-17T12:00:00Z", "origin": "gdelt" },
+ { "market": null, "source": "BBC News Europe", "title": "Greece declares state of emergency as wildfires spread near Athens", "url": "https://example.org/gr/1", "publishedAt": "2026-11-17T10:00:00Z", "origin": "rss" }
+]

@@ -1,0 +1,40 @@
+# Daily run of the news job.
+# Needs: repository secret ANTHROPIC_API_KEY, and Settings > Pages > Source = "GitHub Actions".
+# The feed is published at https://<user>.github.io/<repo>/news-feed.json
+name: Daily news feed
+on:
+  schedule:
+    - cron: "30 4 * * *"   # every day 04:30 UTC (05:30 Madrid in winter, 06:30 in summer)
+  workflow_dispatch: {}    # "Run workflow" button for a manual run
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: news-feed
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --omit=dev
+      - run: node run.mjs --out out
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NEWS_PREVIOUS_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/news-feed.json
+      - run: rm out/candidates.json
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+    steps:
+      - uses: actions/deploy-pages@v4

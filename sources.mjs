@@ -1,0 +1,121 @@
+/* Candidate headlines from free sources without keys. Every source is optional: a failure is logged and skipped.
+   Candidate shape: { id, market|null, source, title, url, publishedAt, origin: "gdacs"|"gdelt"|"rss"|"previous", extra? } */
+import { MARKETS } from "./markets.mjs";
+
+const UA = "CheilCoEHub-NewsJob/1.0";
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function get(url, { timeout = 30000 } = {}) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeout);
+  try {
+    const res = await fetch(url, { headers: { "User-Agent": UA }, signal: ctrl.signal });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return await res.text();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/* Minimal RSS reader: enough for RSS 2.0 <item> lists, no dependency. */
+function decode(s) {
+  return String(s || "")
+    .replace(/^<!\[CDATA\[|\]\]>$/g, "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'")
+    .replace(/&#(\d+);/g, (m, n) => String.fromCharCode(+n)).replace(/&amp;/g, "&")
+    .replace(/\s+/g, " ").trim();
+}
+function tag(xml, name) {
+  const m = xml.match(new RegExp(`<${name}(?:\\s[^>]*)?>([\\s\\S]*?)</${name}>`, "i"));
+  return m ? decode(m[1]) : "";
+}
+function items(xml) {
+  return xml.match(/<item[\s>][\s\S]*?<\/item>/gi) || [];
+}
+function iso(date) {
+  const d = new Date(date);
+  return isNaN(d) ? new Date().toISOString() : d.toISOString();
+}
+
+/* GDACS (EU/UN disaster alerts). Keeps orange and red alerts in our countries. */
+export async function gdacs(log) {
+  const byIso3 = Object.fromEntries(MARKETS.map((m) => [m.iso3, m.code]));
+  try {
+    const xml = await get("https://www.gdacs.org/xml/rss.xml");
+    const out = [];
+    for (const it of items(xml)) {
+      const level = tag(it, "gdacs:alertlevel");
+      if (!/orange|red/i.test(level)) continue;
+      const iso3s = tag(it, "gdacs:iso3").split(/[,;\s]+/).filter(Boolean);
+      for (const code of iso3s.map((c) => byIso3[c]).filter(Boolean)) {
+        out.push({ market: code, source: "GDACS", title: `${level} alert: ${tag(it, "title")}`, url: tag(it, "link"),
+          publishedAt: iso(tag(it, "pubDate")), origin: "gdacs", extra: tag(it, "description").slice(0, 300) });
+      }
+    }
+    log(`GDACS: ${out.length} alerts`);
+    return out;
+  } catch (e) {
+    log(`GDACS skipped: ${e.message}`);
+    return [];
+  }
+}
+
+/* GDELT DOC 2.0: local press of each country, last 36 h, only the themes that matter.
+   GDELT translates 65 languages, so English keywords also match local-language articles.
+   GDELT asks for one request every 5 seconds. */
+const THEMES = '(election OR referendum OR "general strike" OR "national strike" OR strike OR wildfire OR flood OR earthquake OR storm OR "red alert" OR "state of emergency" OR "national mourning" OR blackout OR outbreak OR "government collapse")';
+
+export async function gdelt(log, { perMarket = 20, pauseMs = 5500 } = {}) {
+  const out = [];
+  for (const m of MARKETS) {
+    const q = encodeURIComponent(`sourcecountry:${m.fips} ${THEMES}`);
+    const url = `https://api.gdeltproject.org/api/v2/doc/doc?query=${q}&mode=artlist&format=json&sort=hybridrel&timespan=36h&maxrecords=${perMarket}`;
+    try {
+      const text = await get(url);
+      const data = JSON.parse(text);
+      const arts = data.articles || [];
+      for (const a of arts) {
+        out.push({ market: m.code, source: a.domain, title: decode(a.title), url: a.url,
+          publishedAt: iso(String(a.seendate || "").replace(/^(\d{4})(\d\d)(\d\d)T(\d\d)(\d\d)(\d\d)Z$/, "$1-$2-$3T$4:$5:$6Z")), origin: "gdelt" });
+      }
+      log(`GDELT ${m.code}: ${arts.length}`);
+    } catch (e) {
+      log(`GDELT ${m.code} skipped: ${e.message}`);
+    }
+    await sleep(pauseMs);
+  }
+  return out;
+}
+
+export async function rss(log, feeds, { perFeed = 30 } = {}) {
+  const out = [];
+  for (const f of feeds) {
+    try {
+      const list = items(await get(f.url)).slice(0, perFeed);
+      for (const it of list) {
+        out.push({ market: f.market, source: f.name, title: tag(it, "title"), url: tag(it, "link"),
+          publishedAt: iso(tag(it, "pubDate") || tag(it, "dc:date")), origin: "rss", extra: tag(it, "description").slice(0, 200) });
+      }
+      log(`RSS ${f.name}: ${list.length}`);
+    } catch (e) {
+      log(`RSS ${f.name} skipped: ${e.message}`);
+    }
+  }
+  return out;
+}
+
+/* Drops duplicates (same url or same title in the same market), old items, and numbers what is left. */
+export function tidy(list, { maxAgeHours = 48 } = {}) {
+  const seen = new Set();
+  const cutoff = Date.now() - maxAgeHours * 36e5;
+  return list
+    .filter((c) => c.title && c.url && (c.origin === "previous" || new Date(c.publishedAt).getTime() >= cutoff))
+    .filter((c) => {
+      const k1 = c.url, k2 = `${c.market}|${c.title.toLowerCase()}`;
+      if (seen.has(k1) || seen.has(k2)) return false;
+      seen.add(k1); seen.add(k2);
+      return true;
+    })
+    .map((c, i) => ({ ...c, id: `c${i + 1}` }));
+}

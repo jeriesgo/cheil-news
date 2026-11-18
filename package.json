@@ -1,0 +1,16 @@
+{
+  "name": "cheil-coe-hub-news-job",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cheil CoE Hub: daily job that picks the 0-2 events per market worth keeping in mind with clients and publishes news-feed.json",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node run.mjs",
+    "dry-run": "node run.mjs --dry-run",
+    "mock": "node run.mjs --candidates fixtures/candidates-sample.json --mock"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.10.0"
+  }
+}
