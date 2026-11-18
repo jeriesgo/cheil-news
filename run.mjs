@@ -13,7 +13,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { CODES, MARKETS, EXTRA_FEEDS } from "./markets.mjs";
-import { gdacs, rss, meteoalarm, tidy, stats, get, items, tag, iso, sleep } from "./sources.mjs";
+import { gdacs, rss, meteoalarm, tidy, stats, get, items as rssItems, tag, iso, sleep } from "./sources.mjs";
 import { gnews } from "./gnews.mjs";
 import { selectFree } from "./free.mjs";
 import { selectPress } from "./press.mjs";
@@ -64,7 +64,7 @@ async function main() {
     log(`Loaded ${candidates.length} candidates from ${file}`);
   } else {
     const alerts = [...(await gdacs(log)), ...(await meteoalarm(log))];
-    const press = ai || flag("--dry-run") || !flag("--no-press") ? [...(await rss(log, EXTRA_FEEDS)), ...(await previousItems()), ...(await gnews(log, { get, items, tag, iso, sleep }))] : [];
+    const press = ai || flag("--dry-run") || !flag("--no-press") ? [...(await rss(log, EXTRA_FEEDS)), ...(await previousItems()), ...(await gnews(log, { get, items: rssItems, tag, iso, sleep }))] : [];
     candidates = tidy([...alerts, ...press]);
     log(`${candidates.length} candidates after removing duplicates (${stats.ok} sources answered, ${stats.failed} failed)`);
     if (!stats.ok) throw new Error("No source could be reached. Keeping the previous feed.");
