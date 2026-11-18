@@ -21,7 +21,9 @@ const NOISE = ["hambre", "fome", "fame", "faim", "hunger", "głodow", "hlad", "�
   "fútbol", "futbol", "futebol", "football", "calcio", "fußball", "voetbal", "piłk", "fotbal", "labdarúg", "nogomet", "ποδόσφ",
   "jalgpall", "futbols", "fodbold", "fotball", "fotboll", "jalkapallo", "футбол", "liga", "champions", "tennis", "nba", "olymp",
   "eurovision", "miss ", "reality", "trump", "biden", "white house", "casa blanca", "maison blanche", "weißen haus", "usa", "eeuu",
-  "estados unidos", "états-unis", "stati uniti", "nsfw", "hentai", "casino", "porn", "bonus", "free spins", "darmowe gry"];
+  "estados unidos", "états-unis", "stati uniti", "nsfw", "hentai", "casino", "porn", "bonus", "free spins", "darmowe gry",
+  "crimea", "crimée", "krim", "крим", "russia", "rusia", "russland", "russie", "росі", "israel", "gaza", "iran", "missile", "drone", "airstrike",
+  "fifa", "uefa", "фіфа", "уєфа"];
 
 function words(s) { return " " + s.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ") + " "; }
 function has(text, list) { return list.some((w) => text.includes(" " + w.toLowerCase())); }
