@@ -1,0 +1,536 @@
+{
+ "version": 1,
+ "generatedAt": "2026-11-21T05:26:00.582Z",
+ "mode": "free",
+ "model": "free",
+ "markets": [
+  "AL",
+  "AT",
+  "BE",
+  "BA",
+  "BG",
+  "HR",
+  "CZ",
+  "DK",
+  "EE",
+  "FI",
+  "FR",
+  "DE",
+  "GR",
+  "HU",
+  "IE",
+  "IT",
+  "LV",
+  "LT",
+  "MK",
+  "NL",
+  "NO",
+  "PL",
+  "PT",
+  "RO",
+  "RS",
+  "SK",
+  "SI",
+  "ES",
+  "SE",
+  "CH",
+  "UA",
+  "UK"
+ ],
+ "items": [
+  {
+   "id": "AT-ba186edac885",
+   "market": "AT",
+   "category": "election",
+   "title": {
+    "es": "Caroline Wahl: Mein Botox-Unfall und warum es besser ist, mit Fältchen schön zu sein",
+    "en": "Caroline Wahl: Mein Botox-Unfall und warum es besser ist, mit Fältchen schön zu sein"
+   },
+   "note": {
+    "es": "Noticia en 4 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 4 outlets. Original headline; open the story for details."
+   },
+   "source": "FAZ",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPOXJlX1dqVEIzaTJHNVVPOFdGSHJ4dC1yS3JMLVlyb1RvbjNUMGdCV2liNTV2WFFDN3Y5Q0prZld3andpWnJZSld1Mk16RE9FYUtOV2QxQkV2WmhCVzZxaUhZUi1HUFBodDNueVN6cmt2TjlsS3dYMEFpZ3hsbFZsX3AzUXAzVE54aDFISnM2bUNGZ2JtODF5bVBkTmZFUUhXUmJWQVZEa0VXcF9hel9aMkl3dTRRS2x3bGNQQi1mb09aMEc2UGc?oc=5",
+   "publishedAt": "2026-11-20T13:16:04.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "BE-6870b87fa7fa",
+   "market": "BE",
+   "category": "strike",
+   "title": {
+    "es": "Grève nationale de la fonction publique au Portugal pour des hausses de salaires",
+    "en": "Grève nationale de la fonction publique au Portugal pour des hausses de salaires"
+   },
+   "note": {
+    "es": "Noticia en 11 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 11 outlets. Original headline; open the story for details."
+   },
+   "source": "Euronews",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZkJPNjdFNGRUQXoyXzE4b0RXNmtQTjZYZEtWMHNoUWJhTGNsMk9oNVQ1UFZ5MXloTUwwal9YWG5ERGkxV0w4QWR6LUZxLWN4NFV1ZkxqV0lFNWk1dUNzUE8yVHMxekpMQVhKdTgzRWkyb292d2MzeG5YNFZQaHY0NkJPWnlZNk9mNWVqbE8xN2xFM3d5b0psNEppazlneXZJMU0wNWFUazlXelZ1OEp1VjRxLXRpZw?oc=5",
+   "publishedAt": "2026-11-20T10:53:31.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "BA-bd30ccefc09f",
+   "market": "BA",
+   "category": "weather",
+   "title": {
+    "es": "Aviso naranja por viento fuerte en 4 zonas de Bosnia",
+    "en": "Orange warning for strong winds in 4 areas of Bosnia"
+   },
+   "note": {
+    "es": "Revisa piezas de exterior en la zona y prevé posibles retrasos.",
+    "en": "Review outdoor content in the area and allow for possible delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-21T05:24:39.188Z",
+   "sample": false
+  },
+  {
+   "id": "BG-ae3c5bb86f50",
+   "market": "BG",
+   "category": "strike",
+   "title": {
+    "es": "Италия е обхваната от 24-часова стачка, която засяга училища, болници и градския транспорт",
+    "en": "Италия е обхваната от 24-часова стачка, която засяга училища, болници и градския транспорт"
+   },
+   "note": {
+    "es": "Noticia en 16 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 16 outlets. Original headline; open the story for details."
+   },
+   "source": "Euronews Bulgaria",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPdWNrZHdMN0ZnWkxIQnZvY1hLT05WUUlTelB4eklGTk5jczJzSThTOGdOZnZVS2JwVjU2QmFKckRfd195S1JmME5fQ2M3MXpaNVkyb1drMjZsWUI1SmpSdmFJbkRJRlNWVzFGWnE2V3lCczl2X1JDdkxwMThLTlZCMzNOZi1rUE1QM1JwQkRrYTh1TzB4c3Q3azBTV29yRWI2UGt4VUxxVFYycFFmN1NvR3ZxaThEdWN6b29GUFY4R3ZHQQ?oc=5",
+   "publishedAt": "2026-11-21T05:19:00.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "FI-418c6e49dbbd",
+   "market": "FI",
+   "category": "weather",
+   "title": {
+    "es": "Aviso naranja por temporal costero en 2 zonas de Finlandia",
+    "en": "Orange warning for coastal storms in 2 areas of Finland"
+   },
+   "note": {
+    "es": "Revisa piezas de exterior en la zona y prevé posibles retrasos.",
+    "en": "Review outdoor content in the area and allow for possible delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-21T05:24:39.188Z",
+   "sample": false
+  },
+  {
+   "id": "FI-a345f32a5738",
+   "market": "FI",
+   "category": "weather",
+   "title": {
+    "es": "Aviso naranja por viento fuerte en Ahvenanmeri",
+    "en": "Orange warning for strong winds in Ahvenanmeri"
+   },
+   "note": {
+    "es": "Revisa piezas de exterior en la zona y prevé posibles retrasos.",
+    "en": "Review outdoor content in the area and allow for possible delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-21T05:24:39.188Z",
+   "sample": false
+  },
+  {
+   "id": "FR-3a3d075a49ed",
+   "market": "FR",
+   "category": "weather",
+   "title": {
+    "es": "Aviso naranja por inundaciones en Pas-de-Calais",
+    "en": "Orange warning for flooding in Pas-de-Calais"
+   },
+   "note": {
+    "es": "Revisa piezas de exterior en la zona y prevé posibles retrasos.",
+    "en": "Review outdoor content in the area and allow for possible delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-21T05:00:46.000Z",
+   "sample": false
+  },
+  {
+   "id": "FR-05bbd73fbe95",
+   "market": "FR",
+   "category": "strike",
+   "title": {
+    "es": "Grève à M2Log : les salariés de Meung-sur-Loire réclament la prime carburant de 1.000 €",
+    "en": "Grève à M2Log : les salariés de Meung-sur-Loire réclament la prime carburant de 1.000 €"
+   },
+   "note": {
+    "es": "Noticia en 11 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 11 outlets. Original headline; open the story for details."
+   },
+   "source": "La République du Centre",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPZXVKNkRBdEoxaGRVQ3UxalhGbHhwY1hTanplZTZPRXZLLTlkXzJMNGd0bXQ0aTdmYlVDQW1nUG43cEZ0RWpTV0p1VXJsZjZKb1gxMzJoMjFoNnpnbHVXenBINHE4SDBWNWExcXMtTEItYnJLZzc2RUIxME9NS1JIRjJ2Vm9iMWJhN1liVnZqcGNYN2NOY1dGYWZTT3UxXzVvMnM5UnU2Y1VPdnFnYzZBVmpMRExxX0VDeVBQM0U4d1pIaXR2cEhIb2dTeGxMTGlRaHFzLVNXMDhPZXo0cGRBVw?oc=5",
+   "publishedAt": "2026-11-21T04:42:00.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "DE-d02ec84f86aa",
+   "market": "DE",
+   "category": "strike",
+   "title": {
+    "es": "Schweinfurt: 24-Stunden-Streik bei ZF und SKF in Schweinfurt: Warum verschärft die IG Metall den Kampf trotz Krise?",
+    "en": "Schweinfurt: 24-Stunden-Streik bei ZF und SKF in Schweinfurt: Warum verschärft die IG Metall den Kampf trotz Krise?"
+   },
+   "note": {
+    "es": "Noticia en 6 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 6 outlets. Original headline; open the story for details."
+   },
+   "source": "Main-Post",
+   "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPY1JoTW5qUUI0LUM5RkhzRnYwVGtiUDQ5NW9GaGhnMGF2NTdvYmYwejhkc3JIZFhzOF9IZFRtZks0djcyUWJ6Z3JBc0FZaGlxVXk1VE03V1FBb2RUNkJFRkdlWHg1cjZnWkE0d1JqdVlrWVZCTlhCYmdndGQzdEFCdmNoVzNqQTNkbFVSXzQ1dXdZYnZROHdKa1ZRUUVzMWpHNUxXMWUzOEFQV3ozLTZnVnRTLTdDc1dzYThxMHhHWEF0OE9HRmdXN0REMmRySEo1TlhyNVEzTDUxUmk2cDlRNDNGVW9kRzVHQXd1M2Fwcjk2aWZjby1wYS0xMXV3djB0a3U3cmVsbDVPdw?oc=5",
+   "publishedAt": "2026-11-21T05:20:32.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "GR-bc208ac3fa5e",
+   "market": "GR",
+   "category": "election",
+   "title": {
+    "es": "Τουρκία: Η αντιπολίτευση καταγγέλλει απόπειρα αποκλεισμού του Ιμάμογλου από τις προεδρικές εκλογές",
+    "en": "Τουρκία: Η αντιπολίτευση καταγγέλλει απόπειρα αποκλεισμού του Ιμάμογλου από τις προεδρικές εκλογές"
+   },
+   "note": {
+    "es": "Noticia en 4 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 4 outlets. Original headline; open the story for details."
+   },
+   "source": "Kathimerini",
+   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPMEpwU0dwNS14QzhqUFVJVE1laG9MbEFybllTS2NIZVhmbVVPUHctZ2VHQ1p0emdVSXhfOHloaE8yamlfWGtqOFRHV21QNnVrVFdIbGpBcUhIM09GaWsxaXgxdlpuQ2hmTjlDcWhSSVYzTElVdlNfMVB1Yy1Zc2lDR0VDQnRwM2h6S05sQjVMUVE3ZFFQUEVVWkNYaTdRNlBNSUxoLVFySmNuUk90ZWhzcU5jTGtBVnZZVFR5MWhIRUMzdDk0N2dMUzNxcU1keUZJQWVsVmJTay0?oc=5",
+   "publishedAt": "2026-11-20T18:40:17.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "HU-79b65898a856",
+   "market": "HU",
+   "category": "strike",
+   "title": {
+    "es": "Ma leáll a termelés az Audi-gyárban: sztrájk miatt",
+    "en": "Ma leáll a termelés az Audi-gyárban: sztrájk miatt"
+   },
+   "note": {
+    "es": "Noticia en 3 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 3 outlets. Original headline; open the story for details."
+   },
+   "source": "Növekedés.hu",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQVnpaaDNGSXgwTExnbFJzY2FSemxjeDdaSkdJUkg3dy02b19uUnlCb1k4RDJtUzgzUFFNU1lQYk9FTW5kNzRNc1FBem9WWENpVXp6RHZqOUxQNWlwVWQtU24zckxBQjN6S3lFNmVQSzd3M1djVFo5RXJuQ1hYd0xUYzlR?oc=5",
+   "publishedAt": "2026-11-20T08:09:18.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "IE-6743a6e95e6e",
+   "market": "IE",
+   "category": "strike",
+   "title": {
+    "es": "Resident doctors in NI stage 24-hour strike over pay",
+    "en": "Resident doctors in NI stage 24-hour strike over pay"
+   },
+   "note": {
+    "es": "Noticia en 9 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 9 outlets. Original headline; open the story for details."
+   },
+   "source": "RTE.ie",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9Uc0Y1WkQ2Q3dBNGJWRkJKc2Q1U2hKcXJUTkVFTFoyZVh4TENFUWQ3ekRyUDNPdmJsd080eWZJaU10dEVYREd6SU1PMW9PQ0pOR0dMeUtXUzVyY1JVbmtCb2Z0SXBYRnN6a3QxU3RyM09QdTZUaWc?oc=5",
+   "publishedAt": "2026-11-20T07:47:06.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "IT-a023d57c1974",
+   "market": "IT",
+   "category": "weather",
+   "title": {
+    "es": "Aviso naranja por tormentas fuertes en 3 zonas de Italia",
+    "en": "Orange warning for severe thunderstorms in 3 areas of Italy"
+   },
+   "note": {
+    "es": "Revisa piezas de exterior en la zona y prevé posibles retrasos.",
+    "en": "Review outdoor content in the area and allow for possible delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-21T05:24:39.188Z",
+   "sample": false
+  },
+  {
+   "id": "IT-c727ae58708d",
+   "market": "IT",
+   "category": "strike",
+   "title": {
+    "es": "Scuola, sciopero generale 20 novembre: come aderire",
+    "en": "Scuola, sciopero generale 20 novembre: come aderire"
+   },
+   "note": {
+    "es": "Noticia en 36 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 36 outlets. Original headline; open the story for details."
+   },
+   "source": "FLC CGIL",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxORmhCMVZlbkFoSDRjeTZaMC1Hb1V3Q05yak9qZmk0cUhTSk10alpZdEVxeXVydkFKc0tpUHhDYVJ4NDVvVnhBaHVzZGE0NkdxY1FJNV9la2E1YnNUM2trQ3VHbVgyczBhc3NoMUVjUjBFeUgwSEFhQnE4RmlzQjRyWnFBRUtlaXlic19JMHRPV0E?oc=5",
+   "publishedAt": "2026-11-20T23:52:47.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "NL-e8490ce30e28",
+   "market": "NL",
+   "category": "strike",
+   "title": {
+    "es": "Staking bussen en wegwerkzaamheden op maandag 23 en dinsdag 24 november: Houd rekening met extra reistijd",
+    "en": "Staking bussen en wegwerkzaamheden op maandag 23 en dinsdag 24 november: Houd rekening met extra reistijd"
+   },
+   "note": {
+    "es": "Noticia en 17 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 17 outlets. Original headline; open the story for details."
+   },
+   "source": "Catharina Ziekenhuis",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOQjBjdVVBRERhSEE1dklqSERDLVNaa2oyUjZHTUFYdzF6aERLdnhLbkd6eklFLXMxbDhXT05IcDJ3Qy1VLTFWeW9HcU16SWQwOGVmbUF0eUh0U3F6ekd6b1RrUnZxZXlCMENoUnRjT0pHSTFPSjVGQnR1Vkl2R2JyaHFuYnNLc2lfenhTWHFfdFhGWlEzdjQ4dnFCRVY2N3VLcURXck16dHdWVkZSRzlWS3RYcWdyZy1IUkhsemRYZWxrYlEzNGYwcVNBbVV6bFpIQnE3Ui11bw?oc=5",
+   "publishedAt": "2026-11-20T09:10:26.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "PL-d15e3276f230",
+   "market": "PL",
+   "category": "weather",
+   "title": {
+    "es": "Aviso naranja por viento fuerte en Central coastal zone",
+    "en": "Orange warning for strong winds in Central coastal zone"
+   },
+   "note": {
+    "es": "Revisa piezas de exterior en la zona y prevé posibles retrasos.",
+    "en": "Review outdoor content in the area and allow for possible delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-20T23:00:00.000Z",
+   "sample": false
+  },
+  {
+   "id": "PL-0bc965ba27bc",
+   "market": "PL",
+   "category": "election",
+   "title": {
+    "es": "Wybory do Senatu w Lubuskiem. Za takie złamanie ciszy wyborczej grozi kara",
+    "en": "Wybory do Senatu w Lubuskiem. Za takie złamanie ciszy wyborczej grozi kara"
+   },
+   "note": {
+    "es": "Noticia en 3 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 3 outlets. Original headline; open the story for details."
+   },
+   "source": "NewsLubuski.pl",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOQjRpWHc4ZnRabi1QWHNvUmQ2MF9GTDNYYU1nV0g1SC1iT041UC1uTHlYOHZQNjV4QUFDN2VVZEI3dEFkRVd0bUlSLVBrQlRDZkdiOUpqdjI1U2hxZFhJcC1OQ1BNbGVzTW9RNWs2RlpzbC1rNmVKSXZPQ2FERnFySWFkQ29BZDROYnl1SWJMclotX3h3UUh0VnNUWVB3Q25kTjlEYUwwSmM3Z1REN2x5Vk9oLXB2dw?oc=5",
+   "publishedAt": "2026-11-20T16:06:12.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "PT-6e556dd17e4d",
+   "market": "PT",
+   "category": "weather",
+   "title": {
+    "es": "Aviso rojo por lluvias intensas en 3 zonas de Portugal",
+    "en": "Red warning for heavy rain in 3 areas of Portugal"
+   },
+   "note": {
+    "es": "Pausa mensajes alegres o de exterior en la zona y prevé retrasos en entregas.",
+    "en": "Pause upbeat or outdoor messaging in the area and expect delivery delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-21T05:24:39.188Z",
+   "sample": false
+  },
+  {
+   "id": "PT-e5227399693a",
+   "market": "PT",
+   "category": "strike",
+   "title": {
+    "es": "Função Pública em greve por melhores salários e condições laborais",
+    "en": "Função Pública em greve por melhores salários e condições laborais"
+   },
+   "note": {
+    "es": "Noticia en 18 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 18 outlets. Original headline; open the story for details."
+   },
+   "source": "RTP",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxORndQYmVMdWFaY0FIUkQ5TzZ5aEotazNua1RKQUVkb2oyMEZ4MFl5VUg3UHZFNzNwd0ExSFFJd2xEbEhPOVQ1WDN4Xzc1enpoMzNETF9DS3B6T0l4eUJGLTJHY3ZuV2k2d3hPU2NYZlJndlg4NXhsTUlXelItRUlTdjdoNG1ITFVqa3I0YWRFNS1ENW9RVk9sajdPZ0VuVndqY19oemlCTFBSTXRL?oc=5",
+   "publishedAt": "2026-11-20T17:42:19.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "RO-e3dec76d4e7d",
+   "market": "RO",
+   "category": "strike",
+   "title": {
+    "es": "Grevă generală în Italia. Protestatarii l-au evocat și pe muncitorul român Octav Stroici, decedat anul trecut pe un șantier",
+    "en": "Grevă generală în Italia. Protestatarii l-au evocat și pe muncitorul român Octav Stroici, decedat anul trecut pe un șantier"
+   },
+   "note": {
+    "es": "Noticia en 15 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 15 outlets. Original headline; open the story for details."
+   },
+   "source": "tvrinfo.ro",
+   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQWk1ydEg1bG5ESkxhOXFMNmpidzU1YUxoV3dsdDZoQkNZbG5zUks2aVhNVy1ha3R2SGMxdTFQd2h1ZVFscDZUTzdGVGhTVFdzTW1fbWlqa2FNMDBDTE8wd1pnUVpDX2swOG9VNU1PV3hOdE1Ga2pkdDFHdUUwNWhEcEItWEthTEVXel9DZld4RTVadXAwWFVaMXMzMXkxQnJ0eF9lbHVDeGxuYlFYQmpYb1dfcGdDay1TX05QbGJPOTRmeWgtanBQcm14b1BBMHdpeWNCTFl0ZUg?oc=5",
+   "publishedAt": "2026-11-20T22:07:44.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "RS-f5366edb5f6d",
+   "market": "RS",
+   "category": "election",
+   "title": {
+    "es": "Čupić: Predsednički izbori biće raspisani u narednih nekoliko dana",
+    "en": "Čupić: Predsednički izbori biće raspisani u narednih nekoliko dana"
+   },
+   "note": {
+    "es": "Noticia en 14 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 14 outlets. Original headline; open the story for details."
+   },
+   "source": "Danas",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNR1YtSEsxODV1UzNMWDJ4WlhDT2ZqbUdmMXRFWGZybm5rZXpkWWIxd1BxTF9RQmVlbFc0SnQ1YjBHN2dDSHYzSW5WVHlTdkluTWsxQjBQYlFXalhTVm5pckZidXVzQVp2Y25OeXhxT2dtU2xPaUVqN2JzLW80TE1PVUV5TzBmRXdfWmdGT2hwcDFSQ3JobWRaZm9QcW9PSFRoUmhIQQ?oc=5",
+   "publishedAt": "2026-11-21T00:28:50.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "SK-9581b0dc3abf",
+   "market": "SK",
+   "category": "election",
+   "title": {
+    "es": "SNS podporí zrušenie voľby poštou zo zahraničia, aj keď neprejde jej návrh na zníženie počtu preferenčných hlasov.",
+    "en": "SNS podporí zrušenie voľby poštou zo zahraničia, aj keď neprejde jej návrh na zníženie počtu preferenčných hlasov."
+   },
+   "note": {
+    "es": "Noticia en 15 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 15 outlets. Original headline; open the story for details."
+   },
+   "source": "Spravodajský portál RTVS",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxONHZ4M3VRRGk3ZXdINGNWbl9XRlp1eFNaQ1IzTXpkMkdORlI4aUVKZGJSNnhGTEZvbjMxeFZ4eG1JNFpYSzUxbkVwMHNnSEt0aDUtUFJmRnB0UzdaVHNDQTRKMTdmUlhFVDgwUjgwbk12TGQxWVFwcDdmdVdJZ3Z2S0RSWnNhSGdjMlpESXg3OTBkb1FFUlMteTBsY2NxUEN0RjhHUW5rbFNVc3R6RW84dENWbk1LVkN4NUZGVTBnU3d2aTJTRzJGMm1LOFR5OHA1SVZTQ091WExxMzhBbjJDWlJ6R2ZTRWln?oc=5",
+   "publishedAt": "2026-11-19T18:09:00.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "SI-d7e15078593a",
+   "market": "SI",
+   "category": "strike",
+   "title": {
+    "es": "Italijo zajela splošna stavka, sindikati zahtevajo višje plače in več vlaganj v javne storitve",
+    "en": "Italijo zajela splošna stavka, sindikati zahtevajo višje plače in več vlaganj v javne storitve"
+   },
+   "note": {
+    "es": "Noticia en 4 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 4 outlets. Original headline; open the story for details."
+   },
+   "source": "rtvslo.si",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxObWlTcmlHbHFlcmJQb0VEUnNjczdjNmpLV01IbmRCYVpSTXBXRU1JX0VFX3ZxbU9OcUUxMWQ0LXNBTnFwd0wweFRxanB0SmtvQUVQcWU3a19iSExQc2Zpc1EwbW1zUFdZdHVvbjhlQVpHQzJxUTAyNFpnbV9CUDJHWm5oQTNnYlo4Ml9NNmtvaTFsNG5ONnhJMEUxQW5USWUySTZaTXlYNUE4V2hsT3JYWERaOTNVb0hhVkVyR2dnb0JLazc5WEticGRudTlwSXc?oc=5",
+   "publishedAt": "2026-11-20T12:49:50.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "ES-fcf1a9d0383e",
+   "market": "ES",
+   "category": "weather",
+   "title": {
+    "es": "Aviso naranja por temporal costero en 3 zonas de España",
+    "en": "Orange warning for coastal storms in 3 areas of Spain"
+   },
+   "note": {
+    "es": "Revisa piezas de exterior en la zona y prevé posibles retrasos.",
+    "en": "Review outdoor content in the area and allow for possible delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-21T05:24:39.188Z",
+   "sample": false
+  },
+  {
+   "id": "ES-1ec91e41747c",
+   "market": "ES",
+   "category": "strike",
+   "title": {
+    "es": "Carta abierta al Sindicato de Inquilinas tras la huelga general",
+    "en": "Carta abierta al Sindicato de Inquilinas tras la huelga general"
+   },
+   "note": {
+    "es": "Noticia en 5 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 5 outlets. Original headline; open the story for details."
+   },
+   "source": "El Salto",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOW5oM1R4WnlZdmNCWjVTVXpnWXRKYjVrRFZIeEJBc2diRk15NWU5WmpDYlhYWF9acWRBM21OZ05oQ0RSNEVad2g0ZHZJUVJmQ2hQMVdKUi1NMGFPYXUyRF84YWdsbHVDOEZlS2hzQ3d4Tl9SSTR1VFdFMUtSekF2d3dERC1oY2FTWVJqRWRIY3lNNERP?oc=5",
+   "publishedAt": "2026-11-21T05:00:00.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "CH-4a408cb1b948",
+   "market": "CH",
+   "category": "weather",
+   "title": {
+    "es": "Aviso naranja por nieve y hielo en 31 zonas de Suiza",
+    "en": "Orange warning for snow and ice in 31 areas of Switzerland"
+   },
+   "note": {
+    "es": "Revisa piezas de exterior en la zona y prevé posibles retrasos.",
+    "en": "Review outdoor content in the area and allow for possible delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-21T05:24:39.188Z",
+   "sample": false
+  },
+  {
+   "id": "CH-da80a200fd15",
+   "market": "CH",
+   "category": "weather",
+   "title": {
+    "es": "Aviso naranja por lluvias intensas en 4 zonas de Suiza",
+    "en": "Orange warning for heavy rain in 4 areas of Switzerland"
+   },
+   "note": {
+    "es": "Revisa piezas de exterior en la zona y prevé posibles retrasos.",
+    "en": "Review outdoor content in the area and allow for possible delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-21T05:24:39.188Z",
+   "sample": false
+  },
+  {
+   "id": "UA-2b25e85066e2",
+   "market": "UA",
+   "category": "strike",
+   "title": {
+    "es": "В Італії розпочався загальний страйк проти зростання вартості життя",
+    "en": "В Італії розпочався загальний страйк проти зростання вартості життя"
+   },
+   "note": {
+    "es": "Noticia en 6 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 6 outlets. Original headline; open the story for details."
+   },
+   "source": "Укрінформ - актуальні новини України та світу",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNcy1wTElzWTIzNlpXZ3c0SWhfekVhR1pFa2hvTE9XNXBhQk9UalZ3Ni1SeTZ4TjQzQlY5VEtRWVo2X1ZRcHVzZ0xLU3hKTlZEWUN1M1ByTHduSVc1UWg5RHBPQjNLNmlmaDViMWhjTkE1S1NGQVdndXVjNEpCVXZLeUxZSVR0YjFiSEFobFVlQUdzTXBTWkVnNlljdnB2TUdGdW81Z3RrUi1JTDZmZko3aXE1am5XeHBy0gG-AUFVX3lxTE9oZzRjSmZibEZhM2plSGJlUHFXQTJZQ3g1Y09DSDhLdDVxc2Q0QUxWWjhqWXB0VkFRTV95VS15U1JyaDhtS1FiX2VKVDBWb3UtOVBoQjNkUjVWbWNXMHhqZG92Z2Y2b2dkTnJEMXdyZExWQ19qMk04RzNzQmotNUhTMWkxeHdNSlotOXdCRXpIaUxzVjFXTmFoTnJfcHVxMFFqem1vdkRoYmVzbTk0UG5pcWt3cGhqYjR5QXZsMFE?oc=5",
+   "publishedAt": "2026-11-20T11:08:00.000Z",
+   "original": true,
+   "sample": false
+  }
+ ]
+}
