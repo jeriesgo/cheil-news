@@ -1,0 +1,415 @@
+{
+ "version": 1,
+ "generatedAt": "2026-11-28T05:28:50.132Z",
+ "mode": "free",
+ "model": "free",
+ "markets": [
+  "AL",
+  "AT",
+  "BE",
+  "BA",
+  "BG",
+  "HR",
+  "CZ",
+  "DK",
+  "EE",
+  "FI",
+  "FR",
+  "DE",
+  "GR",
+  "HU",
+  "IE",
+  "IT",
+  "LV",
+  "LT",
+  "MK",
+  "NL",
+  "NO",
+  "PL",
+  "PT",
+  "RO",
+  "RS",
+  "SK",
+  "SI",
+  "ES",
+  "SE",
+  "CH",
+  "UA",
+  "UK"
+ ],
+ "items": [
+  {
+   "id": "AT-35a293a61bff",
+   "market": "AT",
+   "category": "strike",
+   "title": {
+    "es": "Am Black Friday: Warnstreik bei Amazon - bleiben Pakete liegen?",
+    "en": "Am Black Friday: Warnstreik bei Amazon - bleiben Pakete liegen?"
+   },
+   "note": {
+    "es": "Noticia en 8 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 8 outlets. Original headline; open the story for details."
+   },
+   "source": "NDR.de",
+   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOUGtGSTU2cHlneXY4WE9XYm5uUXZMYXlCUHMtZ0M4S2VQQWp5al9QZXlvYXlCTTZHTVJSTVdKNFhwOVZDVlRVbUo4WHIwMnlXZDJDeHRpd050OWtfbGUxQmNwd3BKT0F1b0x5OERTZ3UwcGM0ZGpTN2ZRSmY1VWV0ZGtVYTVWakgyanpXOVphckRNc1o2dmtzajZqRzA1ajRUYmNyUHg3UkV5QVczbmwzeTJsZjJxblp4dzNoVnlYcUE1czZkb2plalR0azIycVl1QWZNNGhYcDNMY0pvc29vbDVqYkUzekw3d3c?oc=5",
+   "publishedAt": "2026-11-27T19:00:00.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "BE-28500fb22a7d",
+   "market": "BE",
+   "category": "election",
+   "title": {
+    "es": "Élections en Espagne : ce que les électeurs attendent du prochain gouvernement avant le scrutin décisif du 29 novembre",
+    "en": "Élections en Espagne : ce que les électeurs attendent du prochain gouvernement avant le scrutin décisif du 29 novembre"
+   },
+   "note": {
+    "es": "Noticia en 17 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 17 outlets. Original headline; open the story for details."
+   },
+   "source": "Touteleurope.eu",
+   "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOamhwNEtBaFBNdnpoVVlLMndIWUwzcmlMV3VOVWVCTzlEX1N6WWg1MGM2VzE3UXpGbFprVlhHRjcwTURvNW44VXNQSzgzYi1FZ3BwRVJHM3k5dWVQeFJUVmN3R0tjdUNUa2dPUmx2RjNZQkxIY1d0YWdJWmZ2VUo3ZXhEdU1xWHJZQ1BvRHozeFE0WTZrMTc5cEdEbmhxaDdVazBEWDdPbjE3UzhJMVhtdEFPVVFwa1RNT1BRcHh1U3l5VmFIWmk1MDBNZkJ1WWcwM1lxeU5qWnlhZWZKM0ZIc2J4eVh5QjFoUlpmNl95N1V4UEdoejhnZW9valh1d1RkTksyM0RaMnk?oc=5",
+   "publishedAt": "2026-11-28T00:45:14.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "BG-707d4e19ff04",
+   "market": "BG",
+   "category": "weather",
+   "title": {
+    "es": "Aviso rojo por viento fuerte en 6 zonas de Bulgaria",
+    "en": "Red warning for strong winds in 6 areas of Bulgaria"
+   },
+   "note": {
+    "es": "Pausa mensajes alegres o de exterior en la zona y prevé retrasos en entregas.",
+    "en": "Pause upbeat or outdoor messaging in the area and expect delivery delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-27T22:00:01.000Z",
+   "sample": false
+  },
+  {
+   "id": "BG-25f31ccc3d77",
+   "market": "BG",
+   "category": "strike",
+   "title": {
+    "es": "Служители на НСИ в Бургас обявиха едночасова стачка",
+    "en": "Служители на НСИ в Бургас обявиха едночасова стачка"
+   },
+   "note": {
+    "es": "Noticia en 8 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 8 outlets. Original headline; open the story for details."
+   },
+   "source": "Chernomorie-bg.com",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNdkpnNmVsSE9CNjdlNnFlUEpwbEwzY3p0YS1JSEZVZnVfMEJZU0U3N0dabFJmM1hMejhtdWJGZ3JlSlYwTEktaWkyYXBNaXUtbkhJVV9vSkloejZVTlNtQy01WEJOMXBGUkstUzdhVW9HRjdIUElMZ0dqSTk1aWVhQmxYbGhGNjBZMUpWRXZid016bjNmZFE?oc=5",
+   "publishedAt": "2026-11-27T14:28:41.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "HR-707d4e19ff04",
+   "market": "HR",
+   "category": "weather",
+   "title": {
+    "es": "Aviso rojo por viento fuerte en Velebit channel region",
+    "en": "Red warning for strong winds in Velebit channel region"
+   },
+   "note": {
+    "es": "Pausa mensajes alegres o de exterior en la zona y prevé retrasos en entregas.",
+    "en": "Pause upbeat or outdoor messaging in the area and expect delivery delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-27T23:01:01.000Z",
+   "sample": false
+  },
+  {
+   "id": "HR-9dc605b05f79",
+   "market": "HR",
+   "category": "weather",
+   "title": {
+    "es": "Aviso naranja por viento fuerte en 5 zonas de Croacia",
+    "en": "Orange warning for strong winds in 5 areas of Croatia"
+   },
+   "note": {
+    "es": "Revisa piezas de exterior en la zona y prevé posibles retrasos.",
+    "en": "Review outdoor content in the area and allow for possible delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-27T23:00:00.000Z",
+   "sample": false
+  },
+  {
+   "id": "FR-9c9f41df8f44",
+   "market": "FR",
+   "category": "strike",
+   "title": {
+    "es": "Grève du mardi 1er décembre : impact sur les services périscolaires",
+    "en": "Grève du mardi 1er décembre : impact sur les services périscolaires"
+   },
+   "note": {
+    "es": "Noticia en 11 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 11 outlets. Original headline; open the story for details."
+   },
+   "source": "| nevers.fr",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbUREb0tfUndvNlVjblZTM21EMWFCT1VDWDh5dVBHc3dobDB6MjR2WDJBYWFhZG9lbm8xU1E3UUYtM3N3Ty1kY0F4SkpKR2ZQSy1PMG5VY2k4YjZXZ3ZkYnh2RlF3Z05wYU11Qm52bFh4NUhoYXoxcHlydEFDZFBrZGhyLXZ6N2wtQXk1bUlfdU5wWmV5QjBMWHg4cUNIUVE?oc=5",
+   "publishedAt": "2026-11-27T17:05:22.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "DE-e80811a15c08",
+   "market": "DE",
+   "category": "strike",
+   "title": {
+    "es": "\"Black Friday\" - Gewerkschaft Verdi ruft zu Streik an deutschen Amazon-Standorten auf",
+    "en": "\"Black Friday\" - Gewerkschaft Verdi ruft zu Streik an deutschen Amazon-Standorten auf"
+   },
+   "note": {
+    "es": "Noticia en 8 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 8 outlets. Original headline; open the story for details."
+   },
+   "source": "Deutschlandfunk",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOenZJanRhRmZGeDE2VHh4Z3YxT0xMaUx6Vzk0RjNCUEszU2tIMWNtRUtYLWxJd2N1Z1ZweDVwWVJ3MWhwSEljRnNZTTlMQXBLNi1LUDhRR1IxeWNDOThZUlBMUXVhS3lwQ01pTUp0WXo2R1FxMlY1aVFlVG1yS2NhYy1DNDZ5dXVnc3RITk0wMTZ6M2pnMzU3NlhBbzVqbHU2VHBnckFha1JRNWp2?oc=5",
+   "publishedAt": "2026-11-27T07:00:00.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "GR-4d852b388b48",
+   "market": "GR",
+   "category": "weather",
+   "title": {
+    "es": "Aviso rojo por tormentas fuertes en 3 zonas de Grecia",
+    "en": "Red warning for severe thunderstorms in 3 areas of Greece"
+   },
+   "note": {
+    "es": "Pausa mensajes alegres o de exterior en la zona y prevé retrasos en entregas.",
+    "en": "Pause upbeat or outdoor messaging in the area and expect delivery delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-27T22:01:00.000Z",
+   "sample": false
+  },
+  {
+   "id": "GR-da69f41cd2c6",
+   "market": "GR",
+   "category": "election",
+   "title": {
+    "es": "Εκλογές στην Ισπανία: Θα καταφέρει το ακροδεξιό κόμμα Vox να γίνει ρυθμιστής της εξουσίας;",
+    "en": "Εκλογές στην Ισπανία: Θα καταφέρει το ακροδεξιό κόμμα Vox να γίνει ρυθμιστής της εξουσίας;"
+   },
+   "note": {
+    "es": "Noticia en 24 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 24 outlets. Original headline; open the story for details."
+   },
+   "source": "Euronews.com",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUlR4VVY0NFNTYkZzWmtGMlBvMUNKVVBjRUpBLUtuS3ZGZklWU05KZnlBdklCclZTOTVsb3BYZTlKMmFPNHZ3bG5YU0NXdm94R3lXZDVqZmlkNkNwdC1VRmtPd1h2RV8zQmp5bDUxUjhuSm9seUQxbDQwa2o1ZjRUTWZSenoydGZCSXBjWGFxR1o1MkdlekU2bjVDN1FyajV6Sk5maERhdExCWDJZRlVYcWt2TXlvN2hLMXktZ2lHU0NpWTQ?oc=5",
+   "publishedAt": "2026-11-27T17:40:17.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "IE-4853c51f76b9",
+   "market": "IE",
+   "category": "election",
+   "title": {
+    "es": "Spain’s Sanchez insists he will defy polls as election campaign wraps up",
+    "en": "Spain’s Sanchez insists he will defy polls as election campaign wraps up"
+   },
+   "note": {
+    "es": "Noticia en 10 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 10 outlets. Original headline; open the story for details."
+   },
+   "source": "The Irish Times",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNbEk3SzJYM1Z6OU13Z1EyYkUzekVNZENWY0lzZW41NWJDQUY4SjVlaGMzdkpnYU1oRTlFTWtKNkRhNlhLZGN1VUc5eWRQV0NyVmJBV0t6LThYbEJJaDdNaWlYZy1na3JKNFVsSXU1Tzc0SElmajZVZkJLelg4UnZVNkxHYl9ja2xqT092VndzZE9rUlBrR0NvR0JsNENpal9CN3R0QVItQWdUV1pGS3BwdDVXYU5VZzBrOHllQ182QzI?oc=5",
+   "publishedAt": "2026-11-27T17:01:36.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "IT-d079e0c51bd4",
+   "market": "IT",
+   "category": "strike",
+   "title": {
+    "es": "SCIOPERO GENERALE venerdì 4 dicembre 2026",
+    "en": "SCIOPERO GENERALE venerdì 4 dicembre 2026"
+   },
+   "note": {
+    "es": "Noticia en 17 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 17 outlets. Original headline; open the story for details."
+   },
+   "source": "ASL Biella",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1aNFo2Y285MXJZYUxBN0tVTUhJdXZQU2lrR1JleFdKQkNKMjBRQ3VHYlNsQWVLX2pETVpFaENSc1lLZmlpQTZBN3ozQ25mX2p2THpPSm80NS1SOEU1dmJvVzRNb1FOeFlNcEktR3d4NnQ5ZFJjemhn?oc=5",
+   "publishedAt": "2026-11-27T14:40:00.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "NL-f7200b63dc20",
+   "market": "NL",
+   "category": "election",
+   "title": {
+    "es": "Spaanse verkiezingen worden referendum: blijft wankelende Pedro Sánchez zondag premier?",
+    "en": "Spaanse verkiezingen worden referendum: blijft wankelende Pedro Sánchez zondag premier?"
+   },
+   "note": {
+    "es": "Noticia en 11 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 11 outlets. Original headline; open the story for details."
+   },
+   "source": "Knack",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNRXNoVDNMTkxJZEZyaWl0Vm1HUnpkTk9jYzhtVDlEbDVHZGdFWG9JVW8zSHhwRXhZZDlNNXFIbUlxZGh3WUxrRWFDekp2bDJLS2tmR3RQZmVwZUtiaXFVdWVaTXljOXpTbURWdGRQQ3FLRWVZRzNna3V6WlNWQ0Rrb2FkS1FVUWhIaWpYVVRhRmdtUWtTb2NodnVlWnZXN2thN2V4VV9ncFA5enFCRW1XOUR6aVNoQS1yRlQxOGRB?oc=5",
+   "publishedAt": "2026-11-28T04:00:00.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "PT-357daffd8392",
+   "market": "PT",
+   "category": "election",
+   "title": {
+    "es": "Eleições em Espanha. Sánchez confiante na vitória apesar de sondagens desfavoráveis",
+    "en": "Eleições em Espanha. Sánchez confiante na vitória apesar de sondagens desfavoráveis"
+   },
+   "note": {
+    "es": "Noticia en 9 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 9 outlets. Original headline; open the story for details."
+   },
+   "source": "RTP",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNaHdQcVJ6dElxZEJSd2RCTVlqUmg2VENuZXpCUHRTUzdPQzh4U1F4Zkxyd0ZDOEZXVVpzbUg1QVlIM0FmRXFMQXBqVWZYcWFSTGpnSUpUTjFJamVjRzRPY0xLWjh2TTN3WVE2blFRdjFNUEF1WjdibDM2cHF4MjJuOUk2WE5xUl83NUdDNTN2cl9UcXJ3T205RGNjNHh2NE83Ri0xQjRiX25ncHZiWUV6Q0tTWkJsTUpyT3Q5ckFHUlQ4ak0?oc=5",
+   "publishedAt": "2026-11-27T23:28:44.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "RO-22835e79011e",
+   "market": "RO",
+   "category": "election",
+   "title": {
+    "es": "Alegeri în Spania. Ascensiunea Vox: de ce femeile, muncitorii și tinerii susțin extrema dreaptă",
+    "en": "Alegeri în Spania. Ascensiunea Vox: de ce femeile, muncitorii și tinerii susțin extrema dreaptă"
+   },
+   "note": {
+    "es": "Noticia en 15 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 15 outlets. Original headline; open the story for details."
+   },
+   "source": "Digi24",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNbW44dHJyOVdVZTVzblhXbHdzX29LYldYTEVDU01WaWhOSDRtajREMWY5QzNUS1pLWUNOa2czdXhSQ1R5VjFyZV9RT3ZKU3E1UGhreHQtSnpjTzdTU0tLUmdxQndqU1ZlVk5aTEhSTU5xY1MxcURISUtSZjRLcWhVTDY1UWxxRHRiTlF1RENjTFFmdnUwc0tHV3NrbmdRcHBYQWlpUVo1cFFYX3I1R3htTU53cXZ3SVBFbl9XOTlHb2toaVhTTWRERy1jTmJFUWtkUEHSAdwBQVVfeXFMTTZybXU5RGF3S1A5VTM0eVRWcW1NSk50TDlNOU9scnY5WktUZmtSUU82cUcwOF91TjZhaG1MWUVvVWZ3ZXlTeUdhdG94NTg0emNlbW9iUUh1WXY1TVo5TF9RWnc3WHVNamZ5NFNRMkJpeXBwdjZ5WUFDWFVOc0hSZUlCZkJpYVVTMGtOblRQQ0RKYnlNVmw0QzJ2cDR4MHc1UkR5LVRCNFJWa3lpOW1SWjN2bGdPazQ2QWNDVlV4TG1Na3BsbnF6Z0NZSGRvQW16SDlWZUcwWnNXcU13VQ?oc=5",
+   "publishedAt": "2026-11-28T05:00:44.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "RS-ed51a9822f21",
+   "market": "RS",
+   "category": "weather",
+   "title": {
+    "es": "Aviso naranja por nieve y hielo en 5 zonas de Serbia",
+    "en": "Orange warning for snow and ice in 5 areas of Serbia"
+   },
+   "note": {
+    "es": "Revisa piezas de exterior en la zona y prevé posibles retrasos.",
+    "en": "Review outdoor content in the area and allow for possible delays."
+   },
+   "source": "MeteoAlarm",
+   "url": "https://meteoalarm.org",
+   "publishedAt": "2026-11-27T23:00:00.000Z",
+   "sample": false
+  },
+  {
+   "id": "RS-cea739ff9484",
+   "market": "RS",
+   "category": "election",
+   "title": {
+    "es": "Izbori za predsednika Srbije: Koji je rok za prijavu kandidata i kada se ide u drugi krug?",
+    "en": "Izbori za predsednika Srbije: Koji je rok za prijavu kandidata i kada se ide u drugi krug?"
+   },
+   "note": {
+    "es": "Noticia en 19 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 19 outlets. Original headline; open the story for details."
+   },
+   "source": "Danas",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNM1RXVUl1a3NFclBkVkdHa1pEdW84akpVRUFBM0taQUs0ck4zd1FaNF9CTzRlRmp1R1Y0QUtFZ3o4djhCOVBxYi00MDEta21FTHVlY1gta1pmR0VfTVhicTRRUjVOVC1GQVNWcEZ1Z1NxcWFMNVRGX0ZoSDFHRWJJd0hR?oc=5",
+   "publishedAt": "2026-11-27T13:54:47.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "SK-9eebad3ab580",
+   "market": "SK",
+   "category": "election",
+   "title": {
+    "es": "Predčasné prezidentské voľby v Srbsku sa budú konať 27. decembra",
+    "en": "Predčasné prezidentské voľby v Srbsku sa budú konať 27. decembra"
+   },
+   "note": {
+    "es": "Noticia en 5 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 5 outlets. Original headline; open the story for details."
+   },
+   "source": "SME.sk",
+   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNZnNBYTAwWUR1N2NXZ2l1TzJoMWlpMUU4aHdHM0FMdXM4alNUT2piUWJSYWxLQUdhTGRXaXR3a0lCaU51OWZKaFdpVVNyVDRkRFp5YmctYzR2c2RpWEZKcS1WRW4xMW44Qy1sbW0yNVJ1OUhJdXdKWXNRcXZndGotRXJNTWNCb1JWTXVrYUkzbEFtdjg?oc=5",
+   "publishedAt": "2026-11-26T12:22:36.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "SI-fef6a7dcadb8",
+   "market": "SI",
+   "category": "election",
+   "title": {
+    "es": "V Srbiji razpisali predsedniške volitve, Vučić se ne more več potegovati",
+    "en": "V Srbiji razpisali predsedniške volitve, Vučić se ne more več potegovati"
+   },
+   "note": {
+    "es": "Noticia en 4 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 4 outlets. Original headline; open the story for details."
+   },
+   "source": "24ur.com",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNTUN5X0JaVDBTUTIwNDdiVXJUbGwtbk80S19yclNtbHBOYUo2NXRpUXM4TkZ3WlV0SXNtRXh3Q1ZNUjNLQ0JWaWlkTk80S1RNM09MTzBZMXZ0SjFiY1Q4MEQzYkU0ZjdVQXhKM1FZaGNzUmIzVnZzMTBSYU5IaW53YjhtSEFGbVE2X2FnTWkwc3psOVNjbkhvQVduM05Dc29HUXc2dEM2WEwwU3daS3Y5cA?oc=5",
+   "publishedAt": "2026-11-26T11:44:18.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "ES-577fca63c5ca",
+   "market": "ES",
+   "category": "election",
+   "title": {
+    "es": "Revilla, convencido del resultado de las elecciones generales del 29N: «Hay una alta probabilidad de que el PSOE sea la lista más votada, pero un 95% de que el presidente sea Feijóo»",
+    "en": "Revilla, convencido del resultado de las elecciones generales del 29N: «Hay una alta probabilidad de que el PSOE sea la lista más votada, pero un 95% de que el presidente sea Feijóo»"
+   },
+   "note": {
+    "es": "Noticia en 17 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 17 outlets. Original headline; open the story for details."
+   },
+   "source": "ABC",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOMlNuNTQ2SlBfSkdBekt5SUFXYlgxdE1ETHowWDJhR0xqOVdzNGQ2alZvVjB5TTFEU05XODRaWjNQbzh6MnNHd2REMEZKWXdsV3k5WnJQdkxkdEhHcEdzQXVwUjdsLUtuYjlkYUVSYmZ3Y3QtYlB6NUdCZ0p0WF90NGswRnpxcElycGFSWGdyb2hUQ05EeFpVajJhYUNzYW5sbldwRzV6NEtKeXJ4aFBvUUV6VmlhWDBnVDNXSXA1WDlMb0F0alpxZFBDT050ZDQ0eHRzYUdQVdIB3AFBVV95cUxPY0JDT0VWdmFnWEtTcXRVemE1eExkaHFaQ2pBdnM2VkcyU1RRX0FGc0pWdkh0RHJpZ1lfclNobWFmRnJyT29CUE9VQjFub2lqaWZOc2lwa3dfb1VzWVIxcnJsY0ZVVU9yQ1VPdmJ3MWdZc1gwMW4wYnp3T3JHNmRiNWowdmVlT2g3TEdtdm54cGpFYTVQMEhDT2Etck5NZGd4UXZpRGlLS2poMUdYOThpcjBNcEVmUm9qQWd4QTFzMFRfa2Q5eUM3dXcySk5PZ21jMFdGekg0ZlgwaGNm?oc=5",
+   "publishedAt": "2026-11-28T04:19:42.000Z",
+   "original": true,
+   "sample": false
+  },
+  {
+   "id": "UA-f5271323d519",
+   "market": "UA",
+   "category": "election",
+   "title": {
+    "es": "У Сербії визначили дату виборів президента",
+    "en": "У Сербії визначили дату виборів президента"
+   },
+   "note": {
+    "es": "Noticia en 8 medios. Titular original; abre la noticia para ver el detalle.",
+    "en": "Covered by 8 outlets. Original headline; open the story for details."
+   },
+   "source": "Європейська правда",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1TU0dTM2o5TTJpMHE2aTF1dEN6TTRZTGhPVjVDQ3ptSHV2ZUNxdGVFRFREQzlTNlVWTjlFNmQxVFNqWFZNUHBQNGhwMThjUjduT19qLWdzOGdiYURVSlhiZnU0ZzhiVHVqYUxr?oc=5",
+   "publishedAt": "2026-11-26T11:26:10.000Z",
+   "original": true,
+   "sample": false
+  }
+ ]
+}
